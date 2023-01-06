@@ -1,0 +1,23 @@
+settings:
+  legacy:
+    force: false
+    interval: 0s
+schema:
+- name: go-clean-architecture-web-application-boilerplate
+  path: .
+  commands:
+    build:
+      status: true
+      method: go build -o go_clean_architecture_web_application_boilerplate
+    run:
+      status: true
+      method: ./go_clean_architecture_web_application_boilerplate
+  watcher:
+    extensions:
+    - go
+    paths:
+    - /
+    ignored_paths:
+    - .git
+    - .realize
+    - vendor
